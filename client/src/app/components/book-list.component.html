@@ -3,6 +3,7 @@
     <button type="button" (click)="back()">Back</button>
   </div>
   <div *ngIf="books?.data.length">
+    <span>Displaying {{currentCount}}/{{numberOfResults}} results, </span>
     <button type="button" (click)="previous()">Previous</button>
     <button type="button" (click)="next()">Next</button>
   </div>

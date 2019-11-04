@@ -1,0 +1,22 @@
+<div *ngIf="book">
+    <h2>Book Details</h2>
+    <p>Title: <br>{{book.data.title}}</p>
+    <p>Description: <br>{{book.data.description}}</p>
+    <p>Edition: {{book.data.edition}}</p>
+    <p>Number of Pages: {{book.data.pages}}</p>
+    <p>Genre: {{book.data.genres}}</p>
+    <p>Format: {{book.data.format}}</p>
+</div>
+
+<h2>Reviews</h2>
+<div *ngIf="bookReviews.data.length === 0">
+    No reviews to show
+</div>
+<div *ngIf="bookReviews.data.length > 0">
+    <div *ngFor="let r of bookReviews.data; let i = index">
+        <p>Review Number: {{i + 1}}</p>
+        <p>By: {{r.byline}}</p>
+        <p>Summary: {{r.summary}}</p>
+        <p>See Full Review: <a [href]="r.url">{{r.url}}</a></p>
+    </div>
+</div>

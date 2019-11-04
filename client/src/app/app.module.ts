@@ -10,17 +10,21 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './components/search.component';
 import { BookListComponent } from './components/book-list.component';
 import { BookService } from './book.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BookDetailsComponent } from './components/book-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    BookListComponent
+    BookListComponent,
+    BookDetailsComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,
     RouterModule, FormsModule,
-    AppRouteModule
+    AppRouteModule,
+    BrowserAnimationsModule
   ],
   providers: [ BookService ],
   bootstrap: [ AppComponent ]
